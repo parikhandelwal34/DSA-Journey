@@ -1,3 +1,18 @@
+/*
+Problem: Reorder List
+Platform: GeeksforGeeks
+Problem Link: https://www.geeksforgeeks.org/problems/reorder-list/1
+
+Approach:
+1. Find the middle of the linked list.
+2. Split the list into two halves.
+3. Reverse the second half.
+4. Merge both halves alternately.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
 class Node {
     int data;
     Node next;
