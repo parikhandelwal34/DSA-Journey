@@ -13,69 +13,69 @@ Time Complexity: O(n)
 Space Complexity: O(1)
 */
 
-class Node {
-    int data;
-    Node next;
+// class Node {
+//     int data;
+//     Node next;
 
-    Node(int x) {
-        data = x;
-        next = null;
-    }
-}
+//     Node(int x) {
+//         data = x;
+//         next = null;
+//     }
+// }
 
-class Solution {
+// class Solution {
 
-    Node getMiddle(Node head) {
-        Node slow = head;
-        Node fast = head;
+//     Node getMiddle(Node head) {
+//         Node slow = head;
+//         Node fast = head;
 
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
+//         while (fast != null && fast.next != null) {
+//             slow = slow.next;
+//             fast = fast.next.next;
+//         }
 
-        return slow;
-    }
+//         return slow;
+//     }
 
-    Node reverse(Node head) {
-        Node curr = head;
-        Node prev = null;
+//     Node reverse(Node head) {
+//         Node curr = head;
+//         Node prev = null;
 
-        while (curr != null) {
-            Node next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
+//         while (curr != null) {
+//             Node next = curr.next;
+//             curr.next = prev;
+//             prev = curr;
+//             curr = next;
+//         }
 
-        return prev;
-    }
+//         return prev;
+//     }
 
-    public void reorderList(Node head) {
+//     public void reorderList(Node head) {
 
-        if (head == null || head.next == null) {
-            return;
-        }
+//         if (head == null || head.next == null) {
+//             return;
+//         }
 
-        Node middle = getMiddle(head);
+//         Node middle = getMiddle(head);
 
-        Node second = middle.next;
-        middle.next = null;
+//         Node second = middle.next;
+//         middle.next = null;
 
-        second = reverse(second);
+//         second = reverse(second);
 
-        Node first = head;
+//         Node first = head;
 
-        while (first != null && second != null) {
+//         while (first != null && second != null) {
 
-            Node firstNext = first.next;
-            Node secondNext = second.next;
+//             Node firstNext = first.next;
+//             Node secondNext = second.next;
 
-            first.next = second;
-            second.next = firstNext;
+//             first.next = second;
+//             second.next = firstNext;
 
-            first = firstNext;
-            second = secondNext;
-        }
-    }
-}
+//             first = firstNext;
+//             second = secondNext;
+//         }
+//     }
+// }
